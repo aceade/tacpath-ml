@@ -4,6 +4,9 @@ const deathWeightingInput = document.getElementById("deathInput");
 const enemyWeightingInput = document.getElementById("enemyInput");
 const exposureWeightingInput = document.getElementById("exposureInput");
 
+const blueScoreDisplay = document.getElementById("blueScoreDisplay");
+const orangeScoreDisplay = document.getElementById("orangeScoreDisplay");
+
 const resultPara = document.getElementById("result");
 document.getElementById("submit").onclick = () => submit();
 
@@ -16,6 +19,11 @@ const showMessage = (message, clearInput) => {
     }
 }
 
+const setScores = (blue, orange) => {
+    blueScoreDisplay.textContent = `Blue: ${blue}`;
+    orangeScoreDisplay.textContent = `Orange: ${orange}`;
+}
+
 const submit = async() => {
     if (!isTraining()) {
         let deathWeighting = parseInt(deathWeightingInput.value);
@@ -25,7 +33,8 @@ const submit = async() => {
             console.info("Results:", results);
             let blue = Math.round(results[0].value);
             let orange = Math.round(results[1].value);
-            showMessage(`Predicted scores are Blue: ${blue} to Orange: ${orange}`);
+            showMessage(`Predicted scores:`);
+            setScores(blue, orange);
         })
     } else {
         console.warn("Wait for it!");

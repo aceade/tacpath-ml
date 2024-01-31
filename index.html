@@ -5,6 +5,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
         <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
+        <link href="style.css" rel="stylesheet"/>
     </head>
     <body>
         <script src="sketch.js" type="module"></script>
@@ -12,7 +13,7 @@
         <main>
             <h1>Tactical Pathfinding ML</h1>
 
-            <div>
+            <div id="inputs">
                 <label for="deathInput">Death weighting</label>
                 <input id="deathInput" type="number" min="0" value="0">
                 <label for="enemyInput">Reported enemy weighting</label>
@@ -20,8 +21,12 @@
                 <label for="exposureInput">Exposure weighting</label>
                 <input id="exposureInput" type="number" min="0" value="0">
                 <button id="submit" onclick="submit()">Submit</button>
-                <p id="result" >In progress</p>
+            
+                <p id="result">In progress</p>
+                <p id="blueScoreDisplay"></p>
+                <p id="orangeScoreDisplay"></p>
             </div>
+            
         </main>
 
     </body>
