@@ -22,7 +22,7 @@ const showMessage = (message, clearInput) => {
 export const allowInput = () => {
     const button = document.getElementById("submit");
     button.onclick = submit;
-    button.style.display = "inline";
+    button.removeAttribute("disabled");
     showMessage("Model ready for input", true);
 }
 
