@@ -1,3 +1,4 @@
+import { allowInput } from "./ui.js";
 
 let training = true;
 
@@ -19,6 +20,7 @@ const modelLoaded = async() => {
 const finishedTraining = () => {
     console.log("Done");
     training = false;
+    allowInput();
 }
 
 const nn = ml5.neuralNetwork(options, modelLoaded);

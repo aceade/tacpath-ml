@@ -19,6 +19,13 @@ const showMessage = (message, clearInput) => {
     }
 }
 
+export const allowInput = () => {
+    const button = document.getElementById("submit");
+    button.onclick = submit;
+    button.style.display = "inline";
+    showMessage("Model ready for input", true);
+}
+
 const setScores = (blue, orange) => {
     blueScoreDisplay.textContent = `Blue: ${blue}`;
     orangeScoreDisplay.textContent = `Orange: ${orange}`;

@@ -1,11 +1,14 @@
+/* Avoid an irritating gap around the body*/
+:root {
+    background-color: #004000;
+    color: white;
+}
+
 main {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1440px;
-    padding: 5px;
-    background-color: #004000;
-    color: white;
     align-items: center;
 }
 
@@ -27,12 +30,26 @@ main {
     }
 }
 
+#submit {
+    display: none;
+}
+
+#outputs {
+
+    > p:not(p:empty) {
+        font-size: 1.2rem;
+        border-radius: 5px;
+        padding:5px;
+        border: 2px solid white;
+    }
+}
+
 #blueScoreDisplay {
     background-color: white;
     color: blue;
 }
 
 #orangeScoreDisplay {
-    background-color: white;
+    background-color: black;
     color: orange;
 }

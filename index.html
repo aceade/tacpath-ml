@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <title>Tacpath ML Testing</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
@@ -20,13 +21,17 @@
                 <input id="enemyInput" type="number" min="0" value="0">
                 <label for="exposureInput">Exposure weighting</label>
                 <input id="exposureInput" type="number" min="0" value="0">
-                <button id="submit" onclick="submit()">Submit</button>
+                <button id="submit">Submit</button>
             
-                <p id="result">In progress</p>
-                <p id="blueScoreDisplay"></p>
-                <p id="orangeScoreDisplay"></p>
+
             </div>
-            
+            <div id="outputs">
+
+                <p id="result">Loading and training model</p>
+                <p id="blueScoreDisplay"></p>
+                <p id="orangeScoreDisplay"></p>            
+            </div>
+
         </main>
 
     </body>
